@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de Propiedades</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; background-color: #f4f4f9; }
+        h2 { color: #333; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background-color: #007bff; color: white; }
+        tr:hover { background-color: #f1f1f1; }
+        .btn { padding: 8px 12px; text-decoration: none; border-radius: 4px; font-size: 14px; display: inline-block; }
+        .btn-nuevo { background-color: #28a745; color: white; margin-bottom: 15px; }
+        .btn-editar { background-color: #ffc107; color: black; margin-right: 5px; }
+        .btn-eliminar { background-color: #dc3545; color: white; }
+    </style>
+</head>
+<body>
+
+    <h2>Sistema de Gestión Inmobiliaria - Epic 1</h2>
+    
+    <a th:href="@{/propiedades/nuevo}" class="btn btn-nuevo">+ Agregar Nueva Propiedad</a>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Dirección</th>
+                <th>Ciudad</th>
+                <th>Tipo</th>
+                <th>Ambientes</th>
+                <th>Metros Cuadrados</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="p : ${propiedades}">
+                <td th:text="${p.id}"></td>
+                <td th:text="${p.direccion}"></td>
+                <td th:text="${p.ciudad}"></td>
+                <td th:text="${p.tipo}"></td>
+                <td th:text="${p.cantidadAmbientes}"></td>
+                <td th:text="${p.metrosCuadrados}"></td>
+                <td>
+                    <a th:href="@{/propiedades/editar/{id}(id=${p.id})}" class="btn btn-editar">Editar</a>
+                    <a th:href="@{/propiedades/eliminar/{id}(id=${p.id})}" class="btn btn-eliminar" onclick="return confirm('¿Seguro que querés eliminar esta propiedad?');">Eliminar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

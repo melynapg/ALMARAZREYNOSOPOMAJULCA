@@ -1,0 +1,19 @@
+Grupo:
+
+Maira Belén Almaráz
+mairabelen96az@gmail.com
+Epic 1: ABMC de Propiedades
+
+ 				
+Deisy Melyna Pomajulca Gonzáles
+melyna.pg@gmail.com
+Epic 2: ABMC de Publicaciones2
+
+Marcelo Reynoso
+utn.tuti.marcelo@gmail.com
+Epic 3: ABMC de Contratos
+
+
+https://github.com/melynapg/ALMARAZREYNOSOPOMAJULCA.git
+
+Branch: main
