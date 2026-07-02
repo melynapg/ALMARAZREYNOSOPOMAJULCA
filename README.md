@@ -14,6 +14,4 @@ utn.tuti.marcelo@gmail.com
 Epic 3: ABMC de Contratos
 
 
-https://github.com/melynapg/ALMARAZREYNOSOPOMAJULCA.git
 
-Branch: main
